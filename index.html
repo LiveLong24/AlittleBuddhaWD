@@ -29,23 +29,24 @@
 
             var defencePower = parseInt(document.getElementById('inputDefPower').value);
             // one Dragon use
-            var oneDragonsMin = Math.round(defencePower - 15);
-            var oneDragonsMax = Math.round(defencePower + 15);
-            var id1 = document.querySelector("#oneDragons .range");
-            id1.innerHTML = oneDragonsMin + '  -  ' + oneDragonsMax;
+            if(defencePower>0){
+                var oneDragonsMin = Math.round(defencePower - 15);
+                var oneDragonsMax = Math.round(defencePower + 15);
+                var id1 = document.querySelector("#oneDragons .range");
+                id1.innerHTML = oneDragonsMin + '  -  ' + oneDragonsMax;
 
-            // two Dragons Use
-            var twoDragonsMin = Math.round(defencePower * 1.5 - 15);
-            var twoDragonsMax = Math.round(defencePower * 1.5 + 15);
-            var id1 = document.querySelector("#twoDragons .range");
-            id1.innerHTML = twoDragonsMin + '  -  ' + twoDragonsMax;
+                // two Dragons Use
+                var twoDragonsMin = Math.round(defencePower * 1.5 - 15);
+                var twoDragonsMax = Math.round(defencePower * 1.5 + 15);
+                var id1 = document.querySelector("#twoDragons .range");
+                id1.innerHTML = twoDragonsMin + '  -  ' + twoDragonsMax;
 
-            // three Dragons Use
-            var threeDragonsMin = Math.round(defencePower * 2 - 15);
-            var threeDragonsMax = Math.round(defencePower * 2 + 15);
-            var id1 = document.querySelector("#threeDragons .range");
-            id1.innerHTML = threeDragonsMin + '  -  ' + threeDragonsMax;
-
+                // three Dragons Use
+                var threeDragonsMin = Math.round(defencePower * 2 - 15);
+                var threeDragonsMax = Math.round(defencePower * 2 + 15);
+                var id1 = document.querySelector("#threeDragons .range");
+                id1.innerHTML = threeDragonsMin + '  -  ' + threeDragonsMax;
+            }
         }
     </script>
 
@@ -63,12 +64,12 @@
     <br>
     <table class="border1">
         <tr>
-            <th>Primarch Defence Power that is Target</th>
+            <th>Primarch Defence Power(Target)</th>
             <th>Dragons to be used</th>
         </tr>
         <tr id="oneDragons">
             <td class="range"></td>
-            <td>1</td>
+            <td>3</td>
         </tr>
         <tr id="twoDragons">
             <td class="range"></td>
@@ -76,7 +77,7 @@
         </tr>
         <tr id="threeDragons">
             <td class="range"></td>
-            <td>3</td>
+            <td>1</td>
         </tr>
     </table>
     </div>
